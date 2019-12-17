@@ -1,20 +1,31 @@
 {
   "name": "google-image-search",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A nice greeter",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config jestconfig.json",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caki0915/my-awesome-greeter.git"
+  },
+  "keywords": ["images", "image search", "google search", "google image search"],
+  "author": "matthiasunt",
+
+  "license": "ISC",
   "files": [
     "lib/**/*"
   ],
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.23",
     "jest": "^24.9.0",
