@@ -5,7 +5,7 @@ This is a simple library to get an image URL from a search string via Google sea
 2. Create a new Google Custom Search API key [here](https://console.cloud.google.com/apis/api/customsearch.googleapis.com)
 
 ### Install
-`npm i --save google-image-search`
+`npm i --save simple-google-image-search`
 
 ### Usage
 ```
