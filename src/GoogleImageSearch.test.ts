@@ -1,5 +1,5 @@
-import { GoogleImageSearch } from "./GoogleImageSearch";
 import { env } from "../environment";
+import { GoogleImageSearch } from "./GoogleImageSearch";
 
 const ImageSearch = new GoogleImageSearch(env.apiKey, env.searchEngineId);
 
