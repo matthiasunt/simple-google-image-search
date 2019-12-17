@@ -18,7 +18,6 @@ export class GoogleImageSearch {
       if (res.data.items && res.data.items.length > 0) {
         return res.data.items[0].link;
       } else {
-        console.error(res);
         return "No image found";
       }
     } catch (err) {
