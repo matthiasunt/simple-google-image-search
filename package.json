@@ -1,7 +1,7 @@
 {
   "name": "google-image-search",
   "version": "1.0.0",
-  "description": "A nice greeter",
+  "description": "Get an image URL via Google search from a search string",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
