@@ -1,5 +1,5 @@
 {
-  "name": "google-image-search",
+  "name": "simple-google-image-search",
   "version": "1.0.0",
   "description": "Get an image URL via Google search from a search string",
   "main": "lib/index.js",
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/caki0915/my-awesome-greeter.git"
   },
-  "keywords": ["images", "image search", "google search", "google image search"],
+  "keywords": ["image search", "google search", "google image search", "typescript"],
   "author": "matthiasunt",
 
   "license": "ISC",
