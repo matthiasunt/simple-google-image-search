@@ -2,8 +2,8 @@
   "name": "simple-google-image-search",
   "version": "1.0.3",
   "description": "Get an image URL via Google search from a search string",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
+  "main": "lib/src/GoogleImageSearch.js",
+  "types": "lib/src/GoogleImageSearch.d.ts",
   "scripts": {
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
