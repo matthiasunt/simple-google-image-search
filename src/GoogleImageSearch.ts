@@ -14,7 +14,7 @@ export class GoogleImageSearch {
       const res: {
         status: number;
         data: {
-          items: { link: string; title: string }[];
+          items: Array<{ link: string; title: string }>;
         };
       } = await axios.get(`https://www.googleapis.com/customsearch/v1?key=${this.apiKey}&q=
     ${searchString}&cx=${this.searchEngineId}&searchType=image&enableImageSearch=true`);
