@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 export class GoogleImageSearch {
   private readonly apiKey: string;
@@ -9,7 +9,7 @@ export class GoogleImageSearch {
     this.searchEngineId = searchEngineId;
   }
 
-  public async getImageUrl(searchString: string) {
+  public async getImageUrls(searchString: string) {
     try {
       const res: {
         status: number;
@@ -19,13 +19,18 @@ export class GoogleImageSearch {
       } = await axios.get(`https://www.googleapis.com/customsearch/v1?key=${this.apiKey}&q=
     ${searchString}&cx=${this.searchEngineId}&searchType=image&enableImageSearch=true`);
 
-      if (res.data.items && res.data.items.length > 0) {
-        return res.data.items[0].link;
+      if (res?.data?.items?.length > 0) {
+        return res.data.items.map((it) => it.link);
       } else {
-        return 'No image found.';
+        return "No image found.";
       }
     } catch (err) {
       return err;
     }
+  }
+
+  public async getImageUrl(searchString: string) {
+    let urls = await this.getImageUrls(searchString);
+    return Array.isArray(urls) ? urls[0] : urls;
   }
 }
