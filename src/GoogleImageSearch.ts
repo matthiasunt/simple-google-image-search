@@ -30,7 +30,7 @@ export class GoogleImageSearch {
   }
 
   public async getImageUrl(searchString: string) {
-    let urls = await this.getImageUrls(searchString);
+    const urls = await this.getImageUrls(searchString);
     return Array.isArray(urls) ? urls[0] : urls;
   }
 }
