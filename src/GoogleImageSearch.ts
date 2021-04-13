@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 export class GoogleImageSearch {
   private readonly apiKey: string;
@@ -20,9 +20,9 @@ export class GoogleImageSearch {
     ${searchString}&cx=${this.searchEngineId}&searchType=image&enableImageSearch=true`);
 
       if (res?.data?.items?.length > 0) {
-        return res.data.items.map((it) => it.link);
+        return res.data.items.map(it => it.link);
       } else {
-        return "No image found.";
+        return 'No image found.';
       }
     } catch (err) {
       return err;
